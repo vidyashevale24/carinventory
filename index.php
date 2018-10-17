@@ -5,8 +5,6 @@ include_once "includes/header.php";
 include_once "config/DbFunction.php";
 $object = new DbFunction();
 echo $object->viewManufactuarers();  
-echo $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
 ?>
 <body>
 	<div class="container">

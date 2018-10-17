@@ -43,8 +43,9 @@ class DbFunction{
 	                <tr>       
 	                     <td>'.$i.'.</td>  
 	                     <td>'.$row->manf_name.'</td>  
-	                     <td><button type="button" name="update" id="'.$row->manf_id.'" class="btn btn-success">Update</button></td>  
-	                     <td><button type="button" name="delete" id="'.$row->manf_id.'" class="btn btn-danger">Delete</button></td>  
+	                     <td><button type="button" name="edit" id="'.$row->manf_id.'" class="btn btn-success">Edit <i class="fa fa-pencil-square-o"></i></button>
+	                     
+	                     <td><button type="button" name="delete" id="'.$row->manf_id.'" class="btn btn-danger">Delete <i class="fa fa-trash-o"</button></td>  
 	                </tr>  
 	                ';  
 	                $i++;
@@ -57,7 +58,7 @@ class DbFunction{
 	}
 
 	function viewManufactuarers(){
-		echo "here";
+		//echo "here";
 	}
 	function login($loginid,$password){
 	
