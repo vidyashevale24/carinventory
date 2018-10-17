@@ -28,24 +28,23 @@ class DbFunction{
 	    if($rowcount > 0 ){
 		    $output .= 	'  
 		    	<h2>Manufacturer Details</h2>
-	           	<table class="table table-bordered table-striped">  
+	           	<table class="table">  
 	                <tr>  
-	                    <th width="35%">Manufacturer Id</th>  
+	                    <th width="35%">Sr. No.</th>  
 	                    <th width="35%">Manufacturer Name</th>  
-	                    <th width="10%">Update</th>  
-	                    <th width="10%">Delete</th>  
+	                    <th width="10%"></th>  
+	                    <th width="10%"></th>  
 	                </tr>  
 	           ';  
 	           $i = 1;	               
 	           while($row = mysqli_fetch_object($result))  
 	           {  
-
 	           		$output .= '  
 	                <tr>       
 	                     <td>'.$i.'.</td>  
 	                     <td>'.$row->manf_name.'</td>  
-	                     <td><button type="button" name="update" id="'.$row->manf_id.'" class="update">Update</button></td>  
-	                     <td><button type="button" name="delete" id="'.$row->manf_id.'" class="delete">Delete</button></td>  
+	                     <td><button type="button" name="update" id="'.$row->manf_id.'" class="btn btn-success">Update</button></td>  
+	                     <td><button type="button" name="delete" id="'.$row->manf_id.'" class="btn btn-danger">Delete</button></td>  
 	                </tr>  
 	                ';  
 	                $i++;
@@ -53,10 +52,13 @@ class DbFunction{
 	           $output .= '</table>';  
 	           return $output; 
 	       }else{
-	       		return $output; 
+	       		return "fail"; 
 	       }
 	}
 
+	function viewManufactuarers(){
+		echo "here";
+	}
 	function login($loginid,$password){
 	
       if(!ctype_alpha($loginid) || !ctype_alpha($password)){

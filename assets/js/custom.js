@@ -13,11 +13,9 @@ $(document).ready(function(){
             data:{action:action},  
             success:function(data)  
             {  
-            	if (!(data) == ""){  
-	            	$("#manf_table").show().css("visibility", "visible");
+              	$("#manf_table").show().css("visibility", "visible");
 	            	$('#manf_table').html(data); 
-	            } 
-            }  
+	          }  
         });  
    }  
 
@@ -35,6 +33,7 @@ $('#manufacturer_form').on('submit', function(event){
                   processData:false,  
                   success:function(data)  
                   {  
+                    console.log(data);
                        $('#manufacturer_form')[0].reset();  
                        load_data();  
                   }  

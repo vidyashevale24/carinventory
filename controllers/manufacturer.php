@@ -12,7 +12,7 @@
 	{  
 		date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
 		$created_date =  date('Y-m-d H:i:s');
-		echo $object->add_manf($_POST["manf_name"],$created_date);
+		echo $object->add_manf(strtoupper($_POST["manf_name"]),$created_date);
 	}  
  }  
  ?>  
